@@ -36,6 +36,8 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
+import junit.framework.Test;
+
 
 /**
  * this is our op mode
@@ -133,6 +135,14 @@ public class TestLift extends LinearOpMode
             robot.leftDrive.setPower(leftPower);
             robot.rightDrive.setPower(rightPower);
             robot.lift.setTargetPosition(robot.liftPosition);
+            if(robot.liftPosition >= TestHardware.MIN_POSITION && robot.liftPosition <= TestHardware.MAX_POSITION)
+            {
+                robot.lift.setPower(robot.LIFT_POWER);
+            }
+            else
+            {
+                robot.lift.setPower(0);
+            }
 
             // Show the elapsed game time and wheel power.
             telemetry.addData("Status", "Run Time: " + runtime.toString());

@@ -47,13 +47,13 @@ public class TestHardware
     public Servo    rightClaw   = null;
     public int liftPosition = 0;
 
-    public static final int COUNT_ONE_REV = 280;//280*200 24 teeth
-    public static final int MIN_POSITION = 0;
+    public static final int COUNT_ONE_REV = 280;//280*120:1 revolution 24 teeth/rev 15 cm/24 teeth
+    public static final int MIN_POSITION = 0; //max - min = 30 cm
     public static final int ONE_INCH_POSITION = 2240;
     public static final int SEVEN_INCH_POSITION = 4480;
     public static final int THIRTEEN_INCH_POSITION = 6720;
-    public static final int NINETEEN_INCH_POSITION = 8960;
-    public static final int MAX_POSITION = 8960;
+    public static final int NINETEEN_INCH_POSITION = 67200;
+    public static final int MAX_POSITION = 67200;
 
     public static final double LIFT_POWER = 1;
     public static final double LEFT_CLAW_CLOSE = 1;
